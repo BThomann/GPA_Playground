@@ -1,10 +1,9 @@
-# This is the main of the playground
-def my_print(a, b):
-    if a <= b:
-        m = (a + b) // 2
-        my_print(a, m - 1)
-        print(m, end="")
-        my_print(m + 1, b)
+def my_calc(n):
+    count = 0
+    for i in range(1, n):
+        for j in range(0, n, n // 2):
+            count += 1
+    return count
 
 
-my_print(1, 100)
+print(my_calc(5))
